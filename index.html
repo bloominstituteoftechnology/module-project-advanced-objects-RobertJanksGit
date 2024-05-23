@@ -111,7 +111,22 @@
       //   minusThree.count() // returns "Liftoff!"
       //   minusThree.count() // returns null
       //   minusThree.count() // returns null
-      class CountDown {}
+      class CountDown {
+        constructor(countDown) {
+          this.countDown = countDown;
+        }
+        count() {
+          if (this.countDown === null) {
+            return this.countDown;
+          } else if (this.countDown > 0) {
+            this.countDown--;
+            return `${this.countDown + 1}!`;
+          } else {
+            this.countDown = null;
+            return "Liftoff!";
+          }
+        }
+      }
 
       // 🧪 TESTS, do not work below this line
       // 🧪 TESTS, do not work below this line
